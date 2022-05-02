@@ -20,6 +20,8 @@ jobs:
       uses: actions/setup-dotnet@v2
       with:
         dotnet-version: 5.0.x
+    - name: Listando
+      run: ls
     - name: Acessando diretório da aplicacao
       run: cd app1
     - name: Exibindo diretório atual
