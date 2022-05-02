@@ -22,14 +22,12 @@ jobs:
         dotnet-version: 5.0.x
     - name: Listando
       run: ls
-    - name: Acessando diretório da aplicacao
-      run: cd ./app1
     - name: Exibindo diretório atual
       run: pwd
     - name: Restore dependencies
-      run: dotnet restore
+      run: dotnet restore ./app1/
     - name: Build
-      run: dotnet build --no-restore
+      run: dotnet build --no-restore  ./app1/
     - name: Test
       run: dotnet test --no-build --verbosity normal
     - name: SonarCloud Scan
